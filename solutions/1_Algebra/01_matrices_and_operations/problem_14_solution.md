@@ -60,4 +60,13 @@ The first column is $(0,1)$, which is the first column of $R(90^\circ)$, as expe
 
 **Determinant check.** $\det R(\theta)=\cos^2\theta+\sin^2\theta=1$, so $\det\big(R(\alpha)R(\beta)\big)=1\cdot1=1$. The product has the form of a rotation matrix, whose determinant is also $1$. ✓
 
-**Length check.** The columns of $R(\theta)$ have length $\sqrt{\cos^2\theta+\sin^2\theta}=1$, so a rotation preserves lengths. A composition of two length-preserving maps preserves lengths too, which agrees with $R(\alpha+\beta)$ being a rotation. ✓
+**Length check.** The columns of $R(\theta)$ are $(\cos\theta,\sin\theta)$ and $(-\sin\theta,\cos\theta)$.
+
+- Each has length $\sqrt{\cos^2\theta+\sin^2\theta}=1$.
+- They are perpendicular: $\cos\theta\cdot(-\sin\theta)+\sin\theta\cdot\cos\theta=0$.
+
+Unit length alone would not be enough, since two unit columns could still point in non-perpendicular directions. Together, the two facts give $R(\theta)^TR(\theta)=I$. Therefore, for any vector $x$,
+
+$$\|R(\theta)x\|^2=x^TR(\theta)^TR(\theta)x=x^Tx=\|x\|^2.$$
+
+So a rotation preserves lengths, and so does the product $R(\alpha)R(\beta)$, which agrees with $R(\alpha+\beta)$ being a rotation. ✓
