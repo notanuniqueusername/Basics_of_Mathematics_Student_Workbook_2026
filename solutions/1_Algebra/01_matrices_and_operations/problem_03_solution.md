@@ -56,12 +56,12 @@ A quick way to remember it: write the sizes side by side, $(m\times \underline{n
 ## 3. What the pattern shows
 
 - **Order matters for existence, not only for the values.** $AB$ is defined but $BA$ is not. The same happens for $BC$ versus $CB$, and $AD$ versus $DA$. In these cases the question "is $AB=BA$?" does not even make sense, since one side does not exist.
-- **Both orders can exist with different sizes.** $AB$ is $2\times4$, and $BA$ would be... not defined, but compare $CA$ ($4\times3$) with $AC$ (not defined). Even when both exist, as with square matrices, the results need not be equal (Exercise 4).
-- **Only a square matrix on both sides guarantees both orders.** Two matrices of the same square size $n\times n$ can always be multiplied in either order, and the result is again $n\times n$.
+- **Both orders can exist, with different result sizes.** For $X_{m\times n}$ and $Y_{p\times q}$, the product $XY$ is defined when $n=p$, and $YX$ is defined when $q=m$. So both orders exist exactly when $n=p$ and $q=m$. For example, if $X$ is $2\times3$ and $Y$ is $3\times2$, then $XY$ is $2\times2$ and $YX$ is $3\times3$. These cannot be equal, because they have different sizes.
+- **Same-size square matrices are a special case.** Two $n\times n$ matrices can always be multiplied in either order, and both results are $n\times n$. Even then the results need not be equal (Exercise 4).
 
 ## 4. Verification
 
-The rule can be double-checked by actually trying to pair a row with a column in a failing case.
+The rule can be double-checked by actually trying to pair a row with a column.
 
 Take $AC$. A row of $A$ has 3 entries, and a column of $C$ has 4 entries:
 
