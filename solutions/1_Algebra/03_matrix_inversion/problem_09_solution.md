@@ -20,7 +20,11 @@ Multiply on the left by $A^{-1}$:
 
 $$A^{-1}(AX)=A^{-1}B\quad\Longrightarrow\quad (A^{-1}A)X=A^{-1}B\quad\Longrightarrow\quad X=A^{-1}B.$$
 
-Since $\det A=1$, its inverse is
+Construct the inverse by Gauss–Jordan elimination. The matrix $A$ adds twice the second coordinate to the first, so reverse that row addition on both halves of $[A\mid I]$:
+
+$$\left[\begin{array}{cc|cc}1&2&1&0\\0&1&0&1\end{array}\right]\xrightarrow{R_1\leftarrow R_1-2R_2}\left[\begin{array}{cc|cc}1&0&1&-2\\0&1&0&1\end{array}\right].$$
+
+The left half is $I$, so the right half is $A^{-1}$:
 
 $$A^{-1}=\begin{pmatrix}1&-2\\0&1\end{pmatrix}.$$
 

@@ -18,7 +18,11 @@ The determinant is $2\cdot3-1\cdot1=5$, so an inverse exists. The unknown is a t
 
 ## 2. Compute the solution vector
 
-First find the inverse:
+Use the $2\times2$ inverse rule
+
+$$M=\begin{pmatrix}a&b\\c&d\end{pmatrix},\qquad M^{-1}=\frac1{ad-bc}\begin{pmatrix}d&-b\\-c&a\end{pmatrix},\qquad ad-bc\ne0.$$
+
+For the given $A$, exchange the diagonal entries $2,3$, negate the off-diagonal entries $1,1$, and divide every entry by the determinant $5$:
 
 $$\det A=2\cdot3-1\cdot1=5,\qquad A^{-1}=\frac15\begin{pmatrix}3&-1\\-1&2\end{pmatrix}.$$
 

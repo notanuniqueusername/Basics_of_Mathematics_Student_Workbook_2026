@@ -20,11 +20,19 @@ At $0^+$, write $x=1/t$: $(\ln x)/x=-t\ln t\to-\infty$. Thus $x=0$ is a vertical
 
 ## 2. First and second derivatives
 
-$$f'(x)=\frac{1-\ln x}{x^2}.$$
+Apply the quotient rule with numerator $u(x)=\ln x$, $u'(x)=1/x$, and denominator $v(x)=x$, $v'(x)=1$:
+
+$$f'(x)=\frac{u'v-uv'}{v^2}=\frac{(1/x)\,x-(\ln x)\cdot1}{x^2}=\frac{1-\ln x}{x^2}.$$
 
 It is positive for $x<e$, zero at e, and negative for $x>e$. Hence the unique global maximum is $\boxed{(e,1/e)}$.
 
-$$f''(x)=\frac{2\ln x-3}{x^3}.$$
+For the second derivative, write $f'(x)=(1-\ln x)x^{-2}$ and use the product rule. The two factor derivatives are $-1/x$ and $-2x^{-3}$:
+
+$$f''(x)=\left(-\frac1x\right)x^{-2}+(1-\ln x)(-2x^{-3})=-x^{-3}-2(1-\ln x)x^{-3}.$$
+
+Collecting the coefficients of $x^{-3}$ gives
+
+$$f''(x)=\bigl(-1-2+2\ln x\bigr)x^{-3}=\frac{2\ln x-3}{x^3}.$$
 
 The graph is concave on $(0,e^{3/2})$ and convex on $(e^{3/2},\infty)$, with inflection point
 

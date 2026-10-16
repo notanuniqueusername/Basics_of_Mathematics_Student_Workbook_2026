@@ -28,6 +28,12 @@ From this system-based parametrization, the direction is $v=(1,0,-1)$.
 
 $$n_1=(1,1,1),\qquad n_2=(1,-1,1),$$
 
+Apply the component formula $(a_2b_3-a_3b_2,\ a_3b_1-a_1b_3,\ a_1b_2-a_2b_1)$:
+
+$$n_1\times n_2=\bigl(1\cdot1-1\cdot(-1),\ 1\cdot1-1\cdot1,\ 1\cdot(-1)-1\cdot1\bigr).$$
+
+The components are $1-(-1)=2$, $1-1=0$, and $-1-1=-2$, respectively. Hence
+
 $$n_1\times n_2=(2,0,-2)=2(1,0,-1)=2v.$$
 
 The proportional directions describe the same line; direction vectors need not have equal lengths.

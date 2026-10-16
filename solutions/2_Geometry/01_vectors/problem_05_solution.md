@@ -10,7 +10,7 @@ Given $u=(1,1,0)$ and $v=(1,0,1)$:
 
 ## Before calculating: angle from a dot product
 
-For nonzero vectors, $\cos\theta=(u\cdot v)/(\|u\|\|v\|)$ with $0\le\theta\le\pi$. A positive dot product predicts an acute angle before the exact angle is known.
+For nonzero vectors, $\cos\theta=(u\cdot v)/(\|u\|\|v\|)$ with $0\le\theta\le\pi$. A positive dot product implies $0\le\theta<\pi/2$, allowing a zero angle when the vectors point along the same ray. To conclude that the angle is strictly acute, also rule out that same-ray case.
 
 The angle is defined between vectors translated to a common starting point, not between their endpoints as points. Its standard range $[0,\pi]$ ensures a unique inverse-cosine value. Dividing the dot product by both lengths removes the effect of scale, leaving only the directional information needed for the angle.
 
@@ -18,7 +18,7 @@ The angle is defined between vectors translated to a common starting point, not 
 
 $$u\cdot v=1\cdot1+1\cdot0+0\cdot1=1>0.$$
 
-Therefore the angle is acute.
+The vectors are not parallel: if $v=cu$, their first coordinates would force $c=1$, but their second coordinates would then require $0=1$. Thus they do not point along the same ray. Combining this with the positive dot product gives $0<\theta<\pi/2$, so the angle is strictly acute.
 
 ## 2. Compute the cosine and angle
 

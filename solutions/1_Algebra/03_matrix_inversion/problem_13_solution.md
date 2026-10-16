@@ -25,11 +25,19 @@ For a column vector, the rightmost matrix acts first. In $T=HS$, the scaling $S$
 
 $$T=HS=\begin{pmatrix}1\cdot2+1\cdot0&1\cdot0+1\cdot1\\0\cdot2+1\cdot0&0\cdot0+1\cdot1\end{pmatrix}=\begin{pmatrix}2&1\\0&1\end{pmatrix}.$$
 
-Its determinant is $2$, giving
+For $M=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ with nonzero determinant, the inverse rule is
+
+$$M^{-1}=\frac1{ad-bc}\begin{pmatrix}d&-b\\-c&a\end{pmatrix}.$$
+
+Here $\det T=2\cdot1-1\cdot0=2$. Swap the diagonal entries $2,1$, negate the off-diagonal entries $1,0$, and divide by $2$:
 
 $$T^{-1}=\frac12\begin{pmatrix}1&-1\\0&2\end{pmatrix}=\begin{pmatrix}1/2&-1/2\\0&1\end{pmatrix}.$$
 
-**Method 2: undo the factors in reverse order.** Here $S^{-1}=\begin{pmatrix}1/2&0\\0&1\end{pmatrix}$ and $H^{-1}=\begin{pmatrix}1&-1\\0&1\end{pmatrix}$. Therefore
+**Method 2: undo the factors in reverse order.** The scaling $S$ sends $(x,y)^T$ to $(2x,y)^T$, so its inverse uses reciprocal diagonal factors $1/2$ and $1$. The shear $H$ sends $(x,y)^T$ to $(x+y,y)^T$, so its inverse subtracts the second coordinate from the first. Thus
+
+$$S^{-1}=\begin{pmatrix}1/2&0\\0&1\end{pmatrix},\qquad H^{-1}=\begin{pmatrix}1&-1\\0&1\end{pmatrix}.$$
+
+Multiplying in reverse order gives
 
 $$S^{-1}H^{-1}=\begin{pmatrix}(1/2)1&(1/2)(-1)\\0&1\end{pmatrix}=\boxed{\begin{pmatrix}1/2&-1/2\\0&1\end{pmatrix}}.$$
 

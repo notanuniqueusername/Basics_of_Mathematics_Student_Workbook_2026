@@ -20,7 +20,11 @@ Compute and factor the determinant:
 
 $$\det A(t)=1\cdot1-t\cdot t=1-t^2=(1-t)(1+t).$$
 
-It is nonzero exactly when $\boxed{t\ne1,-1}$. For those values apply the $2\times2$ formula:
+It is nonzero exactly when $\boxed{t\ne1,-1}$. For those values apply the $2\times2$ formula
+
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}^{-1}=\frac1{ad-bc}\begin{pmatrix}d&-b\\-c&a\end{pmatrix}.$$
+
+Exchange the diagonal entries (both are $1$), negate the off-diagonal entries (both become $-t$), and divide by the nonzero determinant $1-t^2$:
 
 $$\boxed{A(t)^{-1}=\frac1{1-t^2}\begin{pmatrix}1&-t\\-t&1\end{pmatrix}}.$$
 

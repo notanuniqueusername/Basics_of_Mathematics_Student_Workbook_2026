@@ -12,7 +12,25 @@ The base parabola $q(x)=x^2-4$ has vertex $(0,-4)$ and zeros $\pm2$. Taking an a
 
 Absolute value is applied to function values, so it reflects only the graph portions below the horizontal axis. It does not replace $x$ by $|x|$, although this particular function is even already. The joins where a reflected and unreflected piece meet must be tested for one-sided slopes, because differentiability of the underlying polynomial does not automatically survive absolute value.
 
-## 1. Write the piecewise formula and derivative
+## 1. Sketch the original parabola and write the reflected formula
+
+First draw $q(x)=x^2-4$, before applying the absolute value. It opens upward, crosses the axis at $(-2,0)$ and $(2,0)$, and has vertex $(0,-4)$:
+
+```text
+ q(x)                   y
+                        ^
+          \             |             /
+           \            |            /
+ 0 ---------*-----------+-----------*--------> x
+          (-2,0)        |         (2,0)
+              \        |        /
+                \      |      /
+                  \    |    /
+-4                  \__*__/
+                     (0,-4)
+```
+
+The central arc on $-2<x<2$ is below the axis. Reflect that arc upward, leaving both outer arms unchanged. Algebraically this gives
 
 $$f(x)=\begin{cases}x^2-4,&|x|\ge2,\\4-x^2,&|x|<2.\end{cases}$$
 
@@ -27,8 +45,7 @@ It decreases on $(-\infty,-2)$, increases on $(-2,0)$, decreases on $(0,2)$, and
 At $-2$, the one-sided derivatives are $-4$ and $4$; at $2$, they are $-4$ and $4$. They disagree, so the derivative does not exist at either join, even though the function is continuous there.
 
 ```text
-Base q: upward parabola, vertex (0,-4), zeros ±2
-After reflection:
+After reflection: f(x)=|x²-4|
  y
 4            * (0,4)
  | \       /   \       /

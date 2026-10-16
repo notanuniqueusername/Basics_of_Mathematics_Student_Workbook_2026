@@ -21,7 +21,11 @@ Both routes use the same coefficient matrix and right-hand side. The determinant
 
 ## 2. Solve by inverse and by elimination
 
-**Method 1: inverse multiplication.** The determinant is $2\cdot3-1\cdot1=5$, so
+**Method 1: inverse multiplication.** For a $2\times2$ matrix, use
+
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}^{-1}=\frac1{ad-bc}\begin{pmatrix}d&-b\\-c&a\end{pmatrix},\qquad ad-bc\ne0.$$
+
+The determinant of $A$ is $2\cdot3-1\cdot1=5$. Exchange its diagonal entries $2,3$, negate its off-diagonal entries $1,1$, and divide by $5$ to obtain
 
 $$A^{-1}=\frac15\begin{pmatrix}3&-1\\-1&2\end{pmatrix}.$$
 

@@ -27,16 +27,25 @@ They disagree, so the two-sided limit does not exist, even as a single extended-
 ## 2. Sketch the behavior
 
 ```text
-      y         x=2
-      ^          :\
-      |          : \
- -----+----------:--\------> x
-      |       \  :
-      |        \ :
-      |         \:
+      y              x=2
+      ^               : *
+      |               : *
+      |               :  *
+      |               :   *
+      |               :     *
+      |               :        *   *    *      *
+ 0 ---+---------------:----------------------------> x
+      | *  *   *      :
+      |          *    :
+      |            *  :
+      |             * :
+      |             * :
+      |             * :
 ```
 
-The left branch descends without bound near the dashed vertical line; the right branch rises without bound there. Both approach $y=0$ far from the asymptote.
+The stars mark schematic branch locations, with spacing chosen for clarity rather than a uniform numerical scale. Every right-branch point is strictly above the horizontal axis, and every left-branch point is strictly below it: $1/(x-2)>0$ when $x>2$ and $1/(x-2)<0$ when $x<2$. Neither branch touches or crosses $y=0$.
+
+The left branch descends without bound as $x\to2^-$; the right branch rises without bound as $x\to2^+$. Far from the vertical asymptote, the branches approach $y=0$ from below and above, respectively.
 
 ## 3. Distinguish nonexistence from an unsigned blowup statement
 
